@@ -1,0 +1,92 @@
+<link rel="import" href="../show-object.html" />
+
+<dom-module id="demo-help">
+  <template>
+      <style>
+        :host {
+          display: inline-block;
+        }
+      </style>
+      <pre>
+        <code>
+[[demoExample]]
+        </code>
+      </pre>
+      <show-object show-object="[[myObj]]"></show-object>
+    </template>
+  <script>
+    Polymer({
+
+      is: 'demo-help',
+
+      properties: {
+        demoExample: {
+          type: String,
+          value: '<show-object show-object="[[myObj]]"></show-object>'
+        },
+        /**
+         * Object to show
+         * @type Object
+         */
+        myObj: {
+          type: Object,
+          notify: true,
+          value: function() {
+            return [{
+              locationId: "a20",
+              latLng: {
+                lat: 40.750454,
+                lng: -73.993519
+              },
+              place: "Pen Station / Madison Square Garden",
+              schedule: [{
+                meetingId: "m120",
+                meetingTime: "07/01/2017 10:00am"
+              }, {
+                meetingId: "m125",
+                meetingTime: "07/05/2017 2:00pm"
+              }, {
+                meetingId: "m130",
+                meetingTime: "07/31/2017 11:00am"
+              }]
+            }, {
+              locationId: "a22",
+              latLng: {
+                lat: 40.761449,
+                lng: -73.977622
+              },
+              place: "MoMA",
+              schedule: [{
+                meetingId: "m121",
+                meetingTime: "07/02/2017 10:30am"
+              }, {
+                meetingId: "m126",
+                meetingTime: "07/06/2017 3:00pm"
+              }]
+            }, {
+              locationId: "a24",
+              latLng: {
+                lat: 40.74829,
+                lng: -73.985599
+              },
+              place: "Empire State Building",
+              schedule: [{
+                meetingId: "m131",
+                meetingTime: "07/29/2017 9:30am"
+              }, {
+                meetingId: "m122",
+                meetingTime: "08/02/2017 10:30am"
+              }, {
+                meetingId: "m127",
+                meetingTime: "08/06/2017 1:00am"
+              }, {
+                meetingId: "m133",
+                meetingTime: "08/29/2017 9:45am"
+              }]
+            }];
+          }
+        },
+      }
+    });
+  </script>
+</dom-module>
