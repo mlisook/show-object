@@ -2,7 +2,7 @@
   "name": "show-object",
   "description": "Displays a JSON formatted and highlighted object, mostly for demo pages and tutorials ",
   "main": "show-object.html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "polymer",
     "json",
@@ -10,7 +10,7 @@
     "display object",
     "object",
     "format",
-    "highlight"
+    "highlight",
     "web-components"
   ],
   "dependencies": {
